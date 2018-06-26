@@ -1,0 +1,4 @@
+
+const initialState = {
+	messageVisibility: false,
+};

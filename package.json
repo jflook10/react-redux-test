@@ -1,0 +1,34 @@
+{
+  "name": "rrfe",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-overdrive": "0.0.9",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "styled-components": "^3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "Working through adding redux to a project. Referenced from- Level Up Tutorials.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jflook10/react-redux-test.git"
+  },
+  "author": "Jillian Flook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jflook10/react-redux-test/issues"
+  },
+  "homepage": "https://github.com/jflook10/react-redux-test#readme"
+}
