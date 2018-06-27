@@ -10,7 +10,11 @@ export default function(state= initialState, action){
 	const {type} = action; //same as action.type set to const, object destructuring
 	switch(type){
 		case 'TOGGLE_MESSAGE':
-			return state;
+			return {
+				...state, //spread state, returning new object full of state
+				messageVisibility: !state.messageVisibility
+			}
+			
 		default:
 			return state;
 	}

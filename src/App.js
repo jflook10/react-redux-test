@@ -11,6 +11,7 @@ import {
 
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
+import {composeWithDevTools} from 'redux-devtools-extension'; //function that goes in createStore
 
 import logo from './logo.svg';
 import './App.css';
@@ -19,12 +20,17 @@ import rootReducer from './rootReducer'
 
 import MoviesList from './MoviesList';
 import MovieDetail from './MovieDetail';
+import Toggle from './Toggle'
 
 // lil bebe reducer
 //const hello = () => ('hello');
 
 //store required to connect redux and react. 
-const store = createStore(rootReducer);
+const store = createStore(
+  rootReducer,
+  {}, //empty object for initial state
+  composeWithDevTools()
+);
 
 const App = () => (
   // provider accepts props of store and the children. makes redux available to entire app via connect from react-redux
@@ -36,6 +42,7 @@ const App = () => (
             <img src={logo} className="App-logo" alt="logo" />
           </Link>
         </header>
+        <Toggle />
         <Switch>
           <Route exact path="/" component={MoviesList} />
           <Route path="/:id" component={MovieDetail} />
