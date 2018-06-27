@@ -1,4 +1,6 @@
 /* eslint react/no-did-mount-set-state: 0 */
+
+// routes and header
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
@@ -13,13 +15,19 @@ import {createStore} from 'redux';
 import logo from './logo.svg';
 import './App.css';
 
+import rootReducer from './rootReducer'
+
 import MoviesList from './MoviesList';
 import MovieDetail from './MovieDetail';
 
-const hello = () => ('hello');
-const store = createStore(hello);
+// lil bebe reducer
+//const hello = () => ('hello');
+
+//store required to connect redux and react. 
+const store = createStore(rootReducer);
 
 const App = () => (
+  // provider accepts props of store and the children. makes redux available to entire app via connect from react-redux
   <Provider store={ store }>
     <Router>
       <div className="App">
