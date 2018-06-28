@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
     "react": "^16.2.0",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.2.0",
@@ -33,5 +31,11 @@
   "bugs": {
     "url": "https://github.com/jflook10/react-redux-test/issues"
   },
-  "homepage": "https://github.com/jflook10/react-redux-test#readme"
+  "homepage": "https://github.com/jflook10/react-redux-test#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest-enzyme": "^6.0.2"
+  }
 }

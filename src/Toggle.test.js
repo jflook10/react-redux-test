@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { mount } from 'enzyme';
+import { shallow, mount, render } from 'enzyme';
+import { expect } from 'chai'; //try adding to remove .find error
 import Toggle from './Toggle';
 
 
 describe('Toggle visbility', () => {
+	let wrapper;
+	beforeEach(() => { wrapper = shallow(<Toggle/>); })
 	it('should render text when toggle true', () =>{
-		const wrapper = mount(
-			<Toggle />
-		);
-		expect(wrapper.html()).toBe(null)
-		wrapper.unmount();
+		expect(wrapper.find('div.div-toggle')).to.have.length(1)
+
+		// wrapper.unmount();
 	})
 });

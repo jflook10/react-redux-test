@@ -7,4 +7,10 @@ const rootReducer = combineReducers({
 	message,
 })
 
+
+//selector
+export function getMessageVisibility(store){
+	return message.messageVisibility 
+}
+
 export default rootReducer;
